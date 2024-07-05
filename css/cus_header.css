@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 1200px;
+}
+
+.disable-scroll {
+    position: relative;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden !important;
+    padding-right: 15px;
+}
+
+/* <!-- header --> */
+div#header {
+    width: 100%;
+    min-width: 1200px;
+    text-align: center;
+}
+
+div#hd-top,
+div#hd-menu {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+}
+
+div.hd-top {
+    background-color: #dd1111;
+}
+
+div#hd-top {
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+div.hd-menu {
+    background-color: #0C1844;
+}
+
+#hd-top a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo a {
+    display: flex;
+}
+
+.logo img {
+    flex: 0.15;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 40px;
+    float: left;
+}
+
+.logo h2 {
+    margin: auto;
+    color: whitesmoke;
+}
+
+#hd-top table {
+    height: 50px;
+    margin: 3px;
+    padding: 0px;
+}
+
+#txt-search {
+    height: 34px;
+    width: 500px;
+    padding-left: 15px;
+}
+
+.btn-search {
+    margin: 0px 0px 0px -5px;
+    height: 34px;
+    width: 50px;
+    background-color: black;
+}
+
+.btn-search :hover {
+    cursor: pointer;
+}
+
+form img {
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
+}
+
+div#hd-top>ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+div#hd-top>ul>li {
+    margin: 3px 10px 0px 10px;
+    color: white;
+}
+
+div#hd-top ul li img {
+    width: 25px;
+    height: 25px;
+}
+
+div#hd-top ul li a {
+    color: white;
+}
+
+div#hd-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0px;
+}
+
+div#hd-menu ul li {
+    text-transform: uppercase;
+    margin: 2px;
+    padding: 10px;
+}
+
+div#hd-menu ul li :hover {
+    color: gray;
+}
+
+div#hd-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.open-login {
+    cursor: pointer;
+    position: relative;
+}
+
+#btn-loggedIn {
+    display: none;
+}
+
+#btn-loggedIn:hover {
+    cursor: pointer;
+}
+
+.level2 {
+    display: none;
+    background-color: whitesmoke;
+    border: solid 1px lightgray;
+    position: absolute;
+    list-style-type: none;
+    text-align: left;
+
+    >li {
+        color: black;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    li:hover {
+        cursor: pointer;
+        background-color: lightgray;
+    }
+}
+
+#admin-nav {
+    display: none;
+}
+
+#login-area {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px gray;
+    margin: auto;
+    margin-top: 150px;
+    width: 600px;
+    height: 420px;
+}
+
+.login-box#mat-khau {
+    display: none;
+}
+
+.login-box#mat-khau .user-name {
+    margin: 0px;
+}
+
+.login-box#mat-khau .user-name #name {
+    margin: 0px;
+    font-size: 20px;
+}
+
+.login-box#mat-khau .login-box-body .default-password {
+    margin: auto;
+    font-size: 18px;
+}
+
+.login-box-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.login-box-header p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.login-box-header .close-button {
+    cursor: pointer;
+    outline: none;
+    color: #939ca3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box-header img {
+    width: 25px;
+    height: 25px;
+}
+
+.login-box-body {
+    text-align: center;
+    height: 277.78px;
+}
+
+.login-box-body img {
+    width: 156px;
+    height: 156px;
+    margin: auto;
+}
+
+.login-box-body div {
+    width: 100%;
+    margin: 15px;
+}
+
+.login-box-body p {
+    width: 55%;
+    font-size: 20px;
+    margin: auto;
+}
+
+.login-box-body input {
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px 5px 5px 15px;
+}
+
+.login-box-footer {
+    text-align: center;
+    margin: 20px;
+}
+
+.login-box-footer button {
+    color: white;
+    background-color: #cb1c22;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.login-box-footer button:hover {
+    background-color: #b81c21;
+}
+
+#error-message,
+#error-message-password {
+    margin: auto;
+    text-align: left;
+    width: 60%;
+    color: red;
+    font-size: 18px;
+}

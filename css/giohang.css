@@ -1,0 +1,125 @@
+body {
+    min-width: 1200px;
+}
+
+.disable-scroll {
+    position: relative;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden !important;
+    padding-right: 15px;
+}
+
+/* <!-- main --> */
+.main {
+    width: 1200px;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.main .empty-cart {
+    display: block;
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.main .empty-cart img {
+    margin: auto;
+    width: 700px;
+}
+
+.main .empty-cart #btn-mua-hang {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: 1px solid rgb(200, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px;
+}
+
+.main .empty-cart #btn-mua-hang:hover {
+    cursor: pointer;
+    background-color: rgb(200, 0, 0);
+}
+
+.cart {
+    display: none;
+    width: 1200px;
+    margin: auto;
+    flex-direction: column;
+}
+
+.cart .so-luong-mat-hang {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px 0px 20px 0px;
+}
+
+.mat-hang {
+    display: flex;
+    flex-direction: column;
+}
+
+.thong-tin-mat-hang {
+    display: flex;
+}
+
+.ten-mat-hang {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.xoa-mat-hang {
+    margin-left: 10px;
+}
+
+.thong-tin-mat-hang .chi-tiet {
+    display: flex;
+    flex-direction: column;
+}
+
+.thong-tin-mat-hang .thiet-lap {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 20px 10px;
+}
+
+.thong-tin-mat-hang .thiet-lap .left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thong-tin-mat-hang .thiet-lap .left .so-luong {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px 10px;
+}
+
+.thong-tin-mat-hang .thiet-lap .left .so-luong .dieu-chinh {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+}
+
+.main .tieu-de {
+    color: gray;
+    margin: 10px;
+}
+
+.khuyen-mai-theo-sp {
+    display: flex;
+    flex-direction: column;
+}
+
+.khuyen-mai-theo-sp .ds-km-sp {
+    display: flex;
+    flex-direction: row;
+}

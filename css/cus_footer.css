@@ -1,0 +1,52 @@
+
+/* <!-- footer --> */
+div#footer {
+    background-color: whitesmoke;
+    display: flex;
+    margin: auto;
+    width: 1200px;
+}
+
+div#footer p {
+    font-size: 15px;
+}
+
+div#footer ul {
+    margin: 25px 10px 10px 15px;
+}
+
+div#footer li {
+    list-style: none;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+div#footer a {
+    text-decoration: none;
+    color: rgb(64, 64, 255);
+}
+
+#ft-4 li a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #cb1c22;
+}
+
+#ft-4 li a span {
+    font-size: 14px;
+    color: black;
+}
+
+#ft-payment {
+    row-gap: 7.5px;
+    max-width: 195px;
+}
+
+#ft-payment img {
+    max-width: 46px;
+}
+
+.in4 img {
+    width: 36px;
+    height: 36px;
+}

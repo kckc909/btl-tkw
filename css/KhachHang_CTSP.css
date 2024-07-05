@@ -1,0 +1,423 @@
+.main {
+    width: 1200px;
+    margin: auto;
+    background-color: white;
+
+    a {
+        text-decoration: none;
+        color: rgb(76, 76, 255);
+    }
+}
+
+.prd-info {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.prd-info .title {
+    display: flex;
+    margin: 30px 0px 10px 0px;
+    padding: 0px 5px 30px 0px;
+    border-bottom: solid 1px lightgray;
+    justify-content: space-between;
+}
+
+.prd-info .prd-name {
+    padding: 0px 0px 0px 15px;
+
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 15px;
+        color: gray;
+    }
+}
+
+.prd-info .prd-rate {
+    display: flex;
+
+    .prd-rating {
+        min-width: 120px;
+    }
+
+    .prd-rating i {
+        color: #ffd43b;
+    }
+
+    .sep {
+        margin: 0px 5px 0px 5px;
+    }
+
+    .prd-rating-link {
+        display: flex;
+
+        a {
+            margin-right: 3px;
+        }
+    }
+}
+
+.prd-info .prd-info-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prd-info-content .left {
+    position: sticky;
+    width: 600px;
+}
+
+.prd-info-content .prd-img {
+    text-align: center;
+    margin: 10px;
+}
+
+.prd-info-content .prd-img img {
+    height: 450px;
+}
+
+.prd-info-content .left .prd-param {
+    flex: 1;
+    padding: 25px;
+    background-color: #f4f4f4;
+    border: solid 1px rgb(206, 206, 206);
+    border-radius: 5px;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin: 5px 0px 15px 5px;
+    }
+
+    i {
+        color: rgb(175, 175, 175);
+    }
+}
+
+.prd-info-content .left .prd-chinhsach {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prd-info-content .left .prd-chinhsach .ndcs {
+    font-size: 17px;
+    color: gray;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.prd-info-content .right {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.prd-info-content .right .prd-price {
+    display: flex;
+
+    .price {
+        font-size: 40px;
+        font-weight: 800;
+        color: red;
+    }
+
+    .real-price {
+        margin: auto;
+        margin-left: 20px;
+        text-decoration-line: line-through;
+        text-decoration-color: gray;
+        color: gray;
+    }
+}
+
+.prd-info-content .right .privilege {
+    margin: 20px 0px 20px 0px;
+}
+
+.prd-info-content .right .promotion {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+
+    .promo-title {
+        width: 100%;
+        height: 50px;
+        padding: 10px 0px 10px 15px;
+        font-size: 20px;
+        font-weight: bold;
+        border: solid 1px lightgray;
+        border-radius: 1px 1px 0px 0px;
+    }
+
+    i {
+        color: rgb(107, 179, 0);
+        margin: 5px 5px 5px 10px;
+    }
+}
+
+.prd-info-content .right .func-btn {
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+
+    button {
+        height: 70px;
+        background-color: rgb(60, 60, 255);
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.prd-info-content .right .func-btn .mua {
+    width: 100%;
+}
+
+.prd-info-content .right .func-btn .mua .btn-mua {
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+    height: 70px;
+    background-color: rgb(255, 55, 55);
+    border-radius: 5px;
+    border: solid 1px red;
+    color: white;
+
+    h3 {
+        font-size: 25px;
+    }
+}
+
+.prd-info-content .right .func-btn .tra-gop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.prd-info-content .right .func-btn .tra-gop .btn-tragop {
+    width: 49.5%;
+    border: solid 1px blue;
+    border-radius: 5px;
+}
+
+.prd-info-content .right .func-btn .tra-gop .btn-tragopquathe {
+    width: 49.5%;
+    border: solid 1px blue;
+    border-radius: 5px;
+}
+
+.prd-info-content .right .hotro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prd-info-content .right .hotro .hotline a {
+    color: red;
+    font-weight: 700;
+}
+
+.prd-ads {
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.prd-ads .left {
+    width: 650px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px
+}
+
+.prd-ads .left :not(:empty) {
+    border: solid 1px rgb(235, 235, 235);
+}
+
+.prd-ads .left img {
+    width: 90%;
+    margin: auto;
+}
+
+.prd-ads .right {
+    border: solid 1px rgb(235, 235, 235);
+    border-radius: 5px;
+    text-align: center;
+    width: 520px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.prd-ads .left .tieude,
+.prd-ads .right .tieude,
+.prd-danhgia .tieude,
+.binhluan .tieude {
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: solid 1px lightgray;
+    padding: 15px;
+}
+
+.prd-ads .right table {
+    margin: 10px 0px 10px 0px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    border-collapse: collapse;
+    width: 500px;
+    text-align: left;
+
+    td {
+        font-size: 20px;
+        border: solid 1px gray;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+}
+
+.prd-ads .right table tr:nth-last-of-type(even) {
+    background-color: rgb(225, 225, 225);
+}
+
+.prd-danhgia,
+.binhluan {
+    margin: 20px 0px 20px 0px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+.prd-danhgia .khongketqua {
+    width: 1200px;
+    text-align: center;
+    /* display: none; */
+
+    img {
+        width: 126px;
+    }
+
+    h3 {
+        margin: 10px;
+    }
+}
+
+.prd-danhgia .noidung {
+    padding: 20px;
+}
+
+.prd-danhgia .danhgia {
+    text-align: center;
+}
+
+.prd-danhgia .danhgia .btn-danhgia {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0px 20px 0px;
+    padding: 10px 20px 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.prd-danhgia .danhgia .btn-danhgia,
+.binhluan .noidung .btn-thembinhluan {
+    cursor: pointer;
+}
+
+.binhluan .noidung {
+    position: relative;
+}
+
+.binhluan .noidung #textarea-binhluan {
+    width: 1170px;
+    height: 70px;
+    margin: 15px 15px 15px 15px;
+    padding: 10px 300px 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    resize: none;
+}
+
+.binhluan .noidung .btn-thembinhluan {
+    position: absolute;
+    right: 25px;
+    top: 28px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+}
+
+.binhluan .noidung .comments {
+    background-color: whitesmoke;
+    width: 1200px;
+    padding: 10px 15px 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.binhluan .noidung .comments .cus-comment {
+    display: flex;
+
+    .name {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    >div {
+        margin: 10px;
+    }
+
+}
+
+.binhluan .noidung .comments .cus-comment .time {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-top: 5pxx;
+
+    .graytext {
+        font-weight: 300;
+        color: rgb(156, 156, 156);
+    }
+
+    i {
+        color: gray;
+        font-size: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    i.fa-solid.fa-thumbs-up {
+        color: rgb(70, 70, 255);
+        font-size: 18px;
+        margin: 0px 3px 0px 0px;
+    }
+
+    .like,
+    .reply {
+        cursor: pointer;
+        color: rgb(70, 70, 255);
+    }
+}

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" id="html-tag">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="/css/cus_header.css">
+    <link rel="stylesheet" href="/css/cus_footer.css">
+    <link rel="stylesheet" href="/css/KhachHang_CTSP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f77248c601.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head> 
+
+<body>
+    <div class="" id="header">
+        <div class="hd-top">
+            <div id="hd-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../img/header/MiniShopLogo-removebg-preview.png" alt="">
+                        <h2>MiniShop</h2>
+                    </a>
+                </div>
+                <div class="hd-search">
+                    <form action autocomplete="off">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="txt-search"
+                                        placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm">
+                                </td>
+                                <td>
+                                    <button class="btn-search" type="submit">
+                                        <img src="../img/header/icons8-search-50.png" alt="search"></img>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <ul>
+                    <li>
+                        <a class="open-login" id="open-login">
+                            <img src="../img/header/account.png" alt="Account"><br>
+                            <span>Tài khoản</span>
+                        </a>
+                        <a id="btn-loggedIn">
+                            <img src="../img/header/account.png" alt="Account"><br>
+                            <span>Tài khoản</span>
+                        </a>
+                        <ul class="level2">
+                            <li id="admin-nav">
+                                Trang quản trị
+                            </li>
+                            <li id="account-settings">
+                                Thông tin tài khoản
+                            </li>
+                            <li id="btn-dang-xuat">
+                                Đăng xuất
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="KhachHang_GioHang.html">
+                            <img src="../img/header/shopping-cart.png" alt="GioHang"><br>
+                            <span>Giỏ hàng</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hd-menu">
+            <div id="hd-menu">
+                <ul>
+                    <li>
+                        <i></i>
+                        <a href="index.html" class="menu-category">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="tin-tuc.html" class="menu-category">
+                            Thông tin hay
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_Laptop.html" class="menu-category">
+                            Laptop
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_MaytinhBang.html" class="menu-category">
+                            Máy tính bảng
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_PC.html" class="menu-category">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Linh kiện
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Phụ kiện
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Máy cũ giá rẻ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="login-area">
+        <div class="login-box" id="tai-khoan">
+            <div class="login-box-header">
+                <p>
+                    Đăng Nhập Hoặc Tạo Tài Khoản
+                </p>
+                <div class="close-button">
+                    <img src="/img/main/ic-x.png" alt="x">
+                </div>
+            </div>
+            <div class="login-box-body">
+                <img src="/img/main/img-login.png" alt="LOGIN">
+                <div>
+                    <p>Nhập số điện thoại mua hàng để hưởng đặc quyền riêng tại cửa hàng</p>
+                </div>
+                <input placeholder="Nhập số điện thoại" id="loginUser"></input>
+                <div id="error-message"></div>
+            </div>
+            <div class="login-box-footer">
+                <button id="btn-tiep-tuc">TIẾP TỤC</button>
+            </div>
+        </div>
+        <div class="login-box" id="mat-khau">
+            <div class="login-box-header">
+                <p>
+                    Đăng Nhập Hoặc Tạo Tài Khoản
+                </p>
+                <div class="close-button">
+                    <img src="/img/main/ic-x.png" alt="x">
+                </div>
+            </div>
+            <div class="login-box-body">
+                <div class="user-name">
+                    <img src="/img/header/account.png" alt="account">
+                    <div id="name"></div>
+                </div>
+                <div class="default-password">
+                    Chào mừng đăng nhập lần đầu, mật khẩu mặc định là : <br>
+                    <b>123</b>
+                </div>
+                <input type="text" id="loginPassword" placeholder="Mật khẩu">
+                <div id="error-message-password"></div>
+            </div>
+            <div class="login-box-footer">
+                <button id="btn-quay-lai">QUAY LẠI</button>
+                <button id="btn-dang-nhap">ĐĂNG NHẬP</button>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="prd-info">
+            <div class="title">
+                <div class="prd-name">
+                    <h2>
+                        PC Gaming E-Power Ryzen 5 5500 / RAM 16GB / SSD 500GB / 650W / GTX 1650
+                    </h2>
+                    <p>(No.00905650)</p>
+                </div>
+                <div class="prd-rate">
+                    <div class="prd-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="prd-rating-link">
+                        <div class="prd-rate-comments">
+                            <a href="#prd-rate">
+                                0 đánh giá
+                            </a>
+                        </div>
+                        <div class="sep">
+                            |
+                        </div>
+                        <div class="prd-ques-comments">
+                            <a href="#comments">
+                                0 Hỏi & đáp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prd-info-content">
+                <div class="left">
+                    <div class="prd-img">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/12/12/638379966455717573_pc-gaming-e-power-ryzen-5-5500-1.jpg"
+                            alt="">
+                    </div>
+                    <div class="prd-param">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-sd-card"></i>
+                                NVIDIA GeForce GTX 1650 4GB
+
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-microchip"></i>
+                                AMD, Ryzen 5, 5500
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-memory"></i>
+                                16 GB (2 thanh 8 GB), DDR4, 3200 MHz
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-hard-drive"></i>
+                                SSD 500 GB
+                            </li>
+                        </ul>
+                        <a href="#">
+                            Xem chi tiết thông số kỹ thuật
+                        </a>
+                    </div>
+                    <div class="prd-chinhsach">
+                        <div class="ndcs">
+                            <i class="fa-solid fa-award"></i>
+                            Hàng chính hãng
+                        </div>
+                        <div class="ndcs">
+                            <i class="fa-solid fa-user-shield"></i>
+                            Bảo hành 24 tháng
+                        </div>
+                        <div class="ndcs">
+                            <i class="fa-solid fa-truck"></i>
+                            Giao hàng miễn phí
+                        </div>
+                        <div class="ndcs">
+                            <i class="fa-solid fa-gears"></i>
+                            Hỗ trợ miễn phí
+                        </div>
+                        <div class="ndcs">
+                            <i class="fa-solid fa-rotate"></i>
+                            <a href="#">
+                                Chính sách đổi trả
+                            </a>
+                        </div>
+                        <div class="ndcs">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                            <a href="#">
+                                Chính sách trả góp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="prd-price">
+                        <div class="price">12.490.000₫</div>
+                        <div class="real-price">13.390.000₫</div>
+                    </div>
+                    <div class="privilege">
+                        Áp dụng cho Học sinh - Sinh viên. Chi tiết
+                        Giảm ngay 401.700đ
+                    </div>
+                    <div class="promotion">
+                        <div class="promo-title">
+                            Nhận ngay khuyến mãi đặc biệt
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Giảm ngay 900,000đ
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Trả góp 0%
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Tặng PMH 200,000đ mua LCD MSI, Viewsonic, Xiaomi,Samsung (Hạn sử dụng 15 ngày)
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Giảm thêm 200.000đ khi Trả góp 0%, 6 tháng qua HomeCredit
+                        </div>
+                    </div>
+                    <div class="func-btn">
+                        <div class="mua">
+                            <button class="btn-mua">
+                                <a href="#">
+                                    <h3>
+                                        Mua ngay
+                                    </h3>
+                                    <h4>
+                                        Giao hàng miễn phí hoặc nhận tại shop
+                                    </h4>
+                                </a>
+                            </button>
+                        </div>
+                        <div class="tra-gop">
+                            <button class="btn-tragop">
+                                <a href="#">
+                                    <h3>
+                                        TRẢ GÓP 0%
+                                    </h3>
+                                    <H4>
+                                        Duyệt nhanh qua điện thoại
+                                    </H4>
+                                </a>
+                            </button>
+                            <button class="btn-tragopquathe">
+                                <a href="#">
+                                    <h3>
+                                        TRẢ GÓP QUA THẺ
+                                    </h3>
+                                    <H4>
+                                        Visa, Master card, JCB, AMEX
+                                    </H4>
+                                </a>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="hotro">
+                        <div class="hotline">
+                            Gọi <a href="#">1800-6601</a> để được tư vấn mua hàng (Miễn phí)
+                        </div>
+                        <div class="linkstore">
+                            <a href="#">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Tìm shop có hàng gần nhất
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prd-ads">
+            <div class="left">
+                <div class="tieude"></div>
+            </div>
+            <div class="right">
+                <div class="thongsokithuat">
+                    <div class="tieude">
+                        Thông số kỹ thuật
+                    </div>
+                    <div class="noidung">
+                        <table>
+                            <tr>
+                                <td>CPU</td>
+                                <td>AMD, Ryzen 5, 5500</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>16 GB (2 thanh 8 GB), DDR4, 3200 MHz</td>
+                            </tr>
+                            <tr>
+                                <td>Ổ cứng</td>
+                                <td>SSD 500 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Đồ họa</td>
+                                <td>NVIDIA GeForce GTX 1650 4GB</td>
+                            </tr>
+                            <tr>
+                                <td>Trọng lượng</td>
+                                <td>5.5 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Kích thước (DxRxC)</td>
+                                <td>299 x 310 x 345 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Xuất xứ</td>
+                                <td>Việt Nam / Trung Quốc</td>
+                            </tr>
+                            <tr>
+                                <td>Năm ra mắt</td>
+                                <td> 2023</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <a href="#">
+                        Xem chi tiết thông số kỹ thuật
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="prd-danhgia">
+            <div class="tieude">
+                Đánh giá
+            </div>
+            <div class="khongketqua">
+                <img src="/img/main/img-fisrt-rate.png" alt="#">
+                <h3>
+                    Hãy là người đầu tiên đánh giá sản phẩm này
+                </h3>
+            </div>
+            <div class="noidung">
+
+            </div>
+            <div class="danhgia">
+                <button class="btn-danhgia">
+                    GỬI ĐÁNH GIÁ
+                </button>
+            </div>
+        </div>
+        <div class="binhluan">
+            <div class="tieude">
+                Bình luận
+            </div>
+            <div class="noidung">
+                <div>
+                    <textarea name="" id="textarea-binhluan" placeholder="Nhập bình luận... "></textarea>
+                    <button class="btn-thembinhluan">
+                        GỬI BÌNH LUẬN
+                    </button>
+                </div>
+                <div class="comments">
+                    <div class="cus-comment">
+                        <div class="cus-avatar">
+                            <img src="/img/header/account.png" alt="avatar">
+                        </div>
+                        <div>
+                            <div class="name">
+                                Lorem Explicabo
+                            </div>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias voluptatum
+                                eligendi amet fugit itaque ex quaerat dolores corporis, labore totam, commodi
+                                asperiores, aut temporibus mollitia facere praesentium repudiandae! Molestias!
+                            </div>
+                            <div class="time">
+                                <div class="graytext">
+                                    Ngày --/--/----
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    Thích
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="reply">
+                                    Trả lời
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="category-container">
+            <ul>
+                <li>
+                    <a href="#">Giới thiệu về công ty</a>
+                </li>
+                <li>
+                    <a href="#">Chính sách bảo mật</a>
+                </li>
+                <li>
+                    <a href="#">Quy chế hoạt động</a>
+                </li>
+                <li>
+                    <a href="#">Kiểm tra hóa đơn điện tử</a>
+                </li>
+                <li>
+                    <a href="#">Tra cứu thông tin bảo hành</a>
+                </li>
+                <li>
+                    <a href="#">Câu hỏi thường gặp mua hàng</a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li><a href="#">
+                        Tin tuyển dụng
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Tin khuyến mãi
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hướng dẫn mua online
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hướng dẫn mua trả góp
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách trả góp
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách thu thập và xửa lý dữ liệu cá nhân
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        Hệ thống cửa hàng
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách đổi trả
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hệ thống bảo hành
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Giới thiệu máy đổi trả
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách mạng di động
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container" id="ft-4">
+            <ul>
+                <li>
+                    <p>Tư vấn mua hàng</p>
+                    <a href="#">1800 6601
+                        <span>(Nhánh 1)</span>
+                    </a>
+                </li>
+                <li>
+                    <p>Hỗ trợ kỹ thuật</p>
+                    <a href="#">1800 6601
+                        <span>(Nhánh 2)</span>
+                    </a>
+                </li>
+                <li>
+                    <p>Góp ý, khiếu nại(8h00 - 22h00)</p>
+                    <a href="#">1800 6616</a>
+                </li>
+                <li>
+                    <p>Hỗ trợ thanh toán:</p>
+                    <div id="ft-payment">
+                        <img src="../img/footer/ft-img6.png" alt="visa">
+                        <img src="../img/footer/ft-img7.png" alt="monstercard">
+                        <img src="../img/footer/ft-img8.png" alt="JCB">
+                        <img src="../img/footer/ft-img9.png" alt="atm">
+                        <img src="../img/footer/ft-img12.png" alt="zalopay">
+                        <img src="../img/footer/ft-img13.png" alt="smartpay">
+                        <img src="../img/footer/ft-img14.png" alt="foxpay">
+                        <img src="../img/footer/ft-img15.png" alt="kredivo">
+                        <img src="../img/footer/ft-imgamex.png" alt="american expresss">
+                        <img src="../img/footer/muadee.png" alt="hdbank">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li>
+                    <div class="in4">
+                        <p>Kết nối với chúng tôi</p>
+                        <img src="/img/footer/ic-facebook.png" alt="facebook">
+                        <img src="/img/footer/ic-zalo.png" alt="zalo">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+    <script src="/js/ctsp.js"></script>
+</body>
+
+</html>

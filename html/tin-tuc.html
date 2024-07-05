@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" id="html-tag">
+
+<meta charset="UTF-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng máy tính MiniShop</title>
+    <link rel="stylesheet" href="/css/cus_header.css">
+    <link rel="stylesheet" href="/css/cus_footer.css">
+    <link rel="stylesheet" href="../css/tintuc.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="" id="header">
+        <div class="hd-top">
+            <div id="hd-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../img/header/MiniShopLogo-removebg-preview.png" alt="">
+                        <h2>MiniShop</h2>
+                    </a>
+                </div>
+                <div class="hd-search">
+                    <form action autocomplete="off">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="txt-search"
+                                        placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm">
+                                </td>
+                                <td>
+                                    <button class="btn-search" type="submit">
+                                        <img src="../img/header/icons8-search-50.png" alt="search"></img>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <ul>
+                    <li>
+                        <a class="open-login" id="open-login">
+                            <img src="../img/header/account.png" alt="Account"><br>
+                            <span>Tài khoản</span>
+                        </a>
+                        <a id="btn-loggedIn">
+                            <img src="../img/header/account.png" alt="Account"><br>
+                            <span>Tài khoản</span>
+                        </a>
+                        <ul class="level2">
+                            <li id="admin-nav">
+                                Trang quản trị
+                            </li>
+                            <li id="account-settings">
+                                Thông tin tài khoản
+                            </li>
+                            <li id="btn-dang-xuat">
+                                Đăng xuất
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="KhachHang_GioHang.html">
+                            <img src="../img/header/shopping-cart.png" alt="GioHang"><br>
+                            <span>Giỏ hàng</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hd-menu">
+            <div id="hd-menu">
+                <ul>
+                    <li>
+                        <i></i>
+                        <a href="index.html" class="menu-category">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="tin-tuc.html" class="menu-category">
+                            Thông tin hay
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_Laptop.html" class="menu-category">
+                            Laptop
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_MaytinhBang.html" class="menu-category">
+                            Máy tính bảng
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_PC.html" class="menu-category">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Linh kiện
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Phụ kiện
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Máy cũ giá rẻ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="login-area">
+        <div class="login-box" id="tai-khoan">
+            <div class="login-box-header">
+                <p>
+                    Đăng Nhập Hoặc Tạo Tài Khoản
+                </p>
+                <div class="close-button">
+                    <img src="/img/main/ic-x.png" alt="x">
+                </div>
+            </div>
+            <div class="login-box-body">
+                <img src="/img/main/img-login.png" alt="LOGIN">
+                <div>
+                    <p>Nhập số điện thoại mua hàng để hưởng đặc quyền riêng tại cửa hàng</p>
+                </div>
+                <input placeholder="Nhập số điện thoại" id="loginUser"></input>
+                <div id="error-message"></div>
+            </div>
+            <div class="login-box-footer">
+                <button id="btn-tiep-tuc">TIẾP TỤC</button>
+            </div>
+        </div>
+        <div class="login-box" id="mat-khau">
+            <div class="login-box-header">
+                <p>
+                    Đăng Nhập Hoặc Tạo Tài Khoản
+                </p>
+                <div class="close-button">
+                    <img src="/img/main/ic-x.png" alt="x">
+                </div>
+            </div>
+            <div class="login-box-body">
+                <div class="user-name">
+                    <img src="/img/header/account.png" alt="account">
+                    <div id="name"></div>
+                </div>
+                <div class="default-password">
+                    Chào mừng đăng nhập lần đầu, mật khẩu mặc định là : <br>
+                    <b>123</b>
+                </div>
+                <input type="text" id="loginPassword" placeholder="Mật khẩu">
+                <div id="error-message-password"></div>
+            </div>
+            <div class="login-box-footer">
+                <button id="btn-quay-lai">QUAY LẠI</button>
+                <button id="btn-dang-nhap">ĐĂNG NHẬP</button>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="title">
+            Tin mới
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">
+                        Tin mới
+                    </a></li>
+                <li><a href="#">
+                        Khuyến mãi
+                    </a></li>
+                <li><a href="#">
+                        Đánh giá
+                    </a></li>
+                <li><a href="">
+                        Tư vấn
+                    </a></li>
+                <li><a href="#">
+                        Sự kiện
+                    </a></li>
+            </ul>
+        </div>
+        <div class="news top">
+            <div class="top-left nav-left">
+                <a href="#">
+                    <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                    <div class="item-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi nulla eos eveniet
+                        minus autem quos dolore
+                    </div>
+                </a>
+                <div class="time">
+                    Lorem ipsum dolor
+                </div>
+            </div>
+            <div class="top-left nav-right">
+                <ul>
+                    <li><a href="#">
+                            <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                            <div class="item-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi nulla eos
+                                eveniet minus autem quos dolore
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                            <div class="item-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi nulla eos
+                                eveniet minus autem quos dolore
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                            <div class="item-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi nulla eos
+                                eveniet minus autem quos dolore
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                            <div class="item-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi nulla eos
+                                eveniet minus autem quos dolore
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                            <div class="item-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi nulla eos
+                                eveniet minus autem quos dolore
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="news-2">
+            <div class="danh-sach-tin-tuc">
+                <div class="tin-tuc-box">
+                    <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                    <div class="thong-tin-tin-tuc">
+                        <div class="tieu-de-tin-tuc">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quis neque id laudantium
+                            aliquam
+                        </div>
+                        <div class="noi-dung-tin-tuc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, voluptatem. Explicabo
+                            minus molestiae, dicta nostrum laudantium reprehenderit mollitia. Earum beatae rerum
+                            impedit, quae saepe veniam aperiam quasi adipisci dolor. Quibusdam! Lorem, ipsum dolor sit
+                            amet elit. Nulla assumenda nesciunt vel eos non sed et, iure, atque eum doloremque rem nam
+                            amet ipsam blanditiis id magnam impedit officia.
+                        </div>
+                        <div class="thong-tin-them">
+                            <img src="/img/header/account.png" alt="">
+                            <div class="tac-gia">Chu Minh</div>
+                            <div>-</div>
+                            <div class="thoi-gian">6 giờ trước</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tin-tuc-box">
+                    <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                    <div class="thong-tin-tin-tuc">
+                        <div class="tieu-de-tin-tuc">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quis neque id laudantium
+                            aliquam
+                        </div>
+                        <div class="noi-dung-tin-tuc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, voluptatem. Explicabo
+                            minus molestiae, dicta nostrum laudantium reprehenderit mollitia. Earum beatae rerum
+                            impedit, quae saepe veniam aperiam quasi adipisci dolor. Quibusdam! Lorem, ipsum dolor sit
+                            amet elit. Nulla assumenda nesciunt vel eos non sed et, iure, atque eum doloremque rem nam
+                            amet ipsam blanditiis id magnam impedit officia.
+                        </div>
+                        <div class="thong-tin-them">
+                            <img src="/img/header/account.png" alt="">
+                            <div class="tac-gia">Chu Minh</div>
+                            <div>-</div>
+                            <div class="thoi-gian">6 giờ trước</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quang-cao">
+                <div class="san-pham-moi">
+                    <div class="tieu-de">
+                        Sản phẩm mới
+                    </div>
+                    <div class="san-pham">
+                        <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                        <div class="thong-tin-san-pham">
+                            <div class="ten-san-pham">
+                                Sản phẩm mới 1
+                            </div>
+                            <div class="so-bai-viet-ve-san-pham">
+                                <a href="#">
+                                    3 bài viết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="san-pham">
+                        <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                        <div class="thong-tin-san-pham">
+                            <div class="ten-san-pham">
+                                Sản phẩm mới 2
+                            </div>
+                            <div class="so-bai-viet-ve-san-pham">
+                                <a href="#">
+                                    2 bài viết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="san-pham">
+                        <img src="/img/tintuc/tren-tay-lenovo-loq-15iax9-4.webp" alt="">
+                        <div class="thong-tin-san-pham">
+                            <div class="ten-san-pham">
+                                Sản phẩm mới 3
+                            </div>
+                            <div class="so-bai-viet-ve-san-pham">
+                                <a href="#">
+                                    14 bài viết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mo-rong">
+                        <a href="#">
+                            Xem thêm
+                        </a>
+                    </div>
+                </div>
+                <div class="khuyen-mai">
+                    <div class="tieu-de">
+                        Khuyến mãi
+                    </div>
+                    <div class="tieu-de-khuyen-mai">
+                        <a href="#">
+                            <img src="/img/tintuc/khuyen-mai/638545633079897765_555555.webp" alt="">
+                            <div class="txt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus enim doloremque
+                                reiciendis.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tieu-de-khuyen-mai">
+                        <a href="#">
+                            <img src="/img/tintuc/khuyen-mai/638545633079897765_555555.webp" alt="">
+                            <div class="txt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus enim doloremque
+                                reiciendis.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mo-rong">
+                        <a href="#">
+                            Xem thêm
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="category-container">
+            <ul>
+                <li>
+                    <a href="#">Giới thiệu về công ty</a>
+                </li>
+                <li>
+                    <a href="#">Chính sách bảo mật</a>
+                </li>
+                <li>
+                    <a href="#">Quy chế hoạt động</a>
+                </li>
+                <li>
+                    <a href="#">Kiểm tra hóa đơn điện tử</a>
+                </li>
+                <li>
+                    <a href="#">Tra cứu thông tin bảo hành</a>
+                </li>
+                <li>
+                    <a href="#">Câu hỏi thường gặp mua hàng</a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li><a href="#">
+                        Tin tuyển dụng
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Tin khuyến mãi
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hướng dẫn mua online
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hướng dẫn mua trả góp
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách trả góp
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách thu thập và xửa lý dữ liệu cá nhân
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        Hệ thống cửa hàng
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách đổi trả
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hệ thống bảo hành
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Giới thiệu máy đổi trả
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách mạng di động
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container" id="ft-4">
+            <ul>
+                <li>
+                    <p>Tư vấn mua hàng</p>
+                    <a href="#">1800 6601
+                        <span>(Nhánh 1)</span>
+                    </a>
+                </li>
+                <li>
+                    <p>Hỗ trợ kỹ thuật</p>
+                    <a href="#">1800 6601
+                        <span>(Nhánh 2)</span>
+                    </a>
+                </li>
+                <li>
+                    <p>Góp ý, khiếu nại(8h00 - 22h00)</p>
+                    <a href="#">1800 6616</a>
+                </li>
+                <li>
+                    <p>Hỗ trợ thanh toán:</p>
+                    <div id="ft-payment">
+                        <img src="../img/footer/ft-img6.png" alt="visa">
+                        <img src="../img/footer/ft-img7.png" alt="monstercard">
+                        <img src="../img/footer/ft-img8.png" alt="JCB">
+                        <img src="../img/footer/ft-img9.png" alt="atm">
+                        <img src="../img/footer/ft-img12.png" alt="zalopay">
+                        <img src="../img/footer/ft-img13.png" alt="smartpay">
+                        <img src="../img/footer/ft-img14.png" alt="foxpay">
+                        <img src="../img/footer/ft-img15.png" alt="kredivo">
+                        <img src="../img/footer/ft-imgamex.png" alt="american expresss">
+                        <img src="../img/footer/muadee.png" alt="hdbank">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li>
+                    <div>
+                        <p>Kết nối với chúng tôi</p>
+                        <img src="/img/footer/ic-facebook.png" alt="facebook">
+                        <img src="/img/footer/ic-zalo.png" alt="zalo">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

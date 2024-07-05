@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" id="html-tag">
+
+<meta charset="UTF-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng máy tính MiniShop</title>
+    <link rel="stylesheet" href="/css/cus_header.css">
+    <link rel="stylesheet" href="/css/cus_footer.css">
+    <link rel="stylesheet" href="../css/MayTinhBang.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .slide {
+            height: 200px;
+            width: 1200px;
+            margin: auto;
+            margin-bottom: 20px;
+            background-color: whitesmoke;border-radius: 10px;
+        }   
+    </style>
+</head>
+
+<body>
+    <div class="" id="header">
+        <div class="hd-top">
+            <div id="hd-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../img/header/MiniShopLogo-removebg-preview.png" alt="">
+                        <h2>MiniShop</h2>
+                    </a>
+                </div>
+                <div class="hd-search">
+                    <form action autocomplete="off">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="txt-search"
+                                        placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm">
+                                </td>
+                                <td>
+                                    <button class="btn-search" type="submit">
+                                        <img src="../img/header/icons8-search-50.png" alt="search"></img>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <ul>
+                    <li>
+                        <a class="open-login" id="open-login">
+                            <img src="../img/header/account.png" alt="Account"><br>
+                            <span>Tài khoản</span>
+                        </a>
+                        <a id="btn-loggedIn">
+                            <img src="../img/header/account.png" alt="Account"><br>
+                            <span>Tài khoản</span>
+                        </a>
+                        <ul class="level2">
+                            <li id="admin-nav">
+                                Trang quản trị
+                            </li>
+                            <li id="account-settings">
+                                Thông tin tài khoản
+                            </li>
+                            <li id="btn-dang-xuat">
+                                Đăng xuất
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="KhachHang_GioHang.html">
+                            <img src="../img/header/shopping-cart.png" alt="GioHang"><br>
+                            <span>Giỏ hàng</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hd-menu">
+            <div id="hd-menu">
+                <ul>
+                    <li>
+                        <i></i>
+                        <a href="index.html" class="menu-category">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="tin-tuc.html" class="menu-category">
+                            Thông tin hay
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_Laptop.html" class="menu-category">
+                            Laptop
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_MaytinhBang.html" class="menu-category">
+                            Máy tính bảng
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="KhachHang_SP_PC.html" class="menu-category">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Linh kiện
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Phụ kiện
+                        </a>
+                    </li>
+                    <li>
+                        <i></i>
+                        <a href="#" class="menu-category">
+                            Máy cũ giá rẻ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="login-area">
+        <div class="login-box" id="tai-khoan">
+            <div class="login-box-header">
+                <p>
+                    Đăng Nhập Hoặc Tạo Tài Khoản
+                </p>
+                <div class="close-button">
+                    <img src="/img/main/ic-x.png" alt="x">
+                </div>
+            </div>
+            <div class="login-box-body">
+                <img src="/img/main/img-login.png" alt="LOGIN">
+                <div>
+                    <p>Nhập số điện thoại mua hàng để hưởng đặc quyền riêng tại cửa hàng</p>
+                </div>
+                <input placeholder="Nhập số điện thoại" id="loginUser"></input>
+                <div id="error-message"></div>
+            </div>
+            <div class="login-box-footer">
+                <button id="btn-tiep-tuc">TIẾP TỤC</button>
+            </div>
+        </div>
+        <div class="login-box" id="mat-khau">
+            <div class="login-box-header">
+                <p>
+                    Đăng Nhập Hoặc Tạo Tài Khoản
+                </p>
+                <div class="close-button">
+                    <img src="/img/main/ic-x.png" alt="x">
+                </div>
+            </div>
+            <div class="login-box-body">
+                <div class="user-name">
+                    <img src="/img/header/account.png" alt="account">
+                    <div id="name"></div>
+                </div>
+                <div class="default-password">
+                    Chào mừng đăng nhập lần đầu, mật khẩu mặc định là : <br>
+                    <b>123</b>
+                </div>
+                <input type="text" id="loginPassword" placeholder="Mật khẩu">
+                <div id="error-message-password"></div>
+            </div>
+            <div class="login-box-footer">
+                <button id="btn-quay-lai">QUAY LẠI</button>
+                <button id="btn-dang-nhap">ĐĂNG NHẬP</button>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="banner">
+            <img src="/img//MayTinhBang/F-C1_1200x300.webp" alt="   ">
+        </div>
+        <div class="container">
+            <div class="left">
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        Hãng sản xuất
+                    </div>
+                    <div class="sidebar-list">
+                        <a href="#">
+                            <input type="checkbox" name="navfilter" id="hsx-all" checked="">
+                            <label for="hsx-all" class="sidebar-label">
+                                Tất cả
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="navfilter" id="hsx-SAMSUNG">
+                            <label for="hsx-SAMSUNG" class="sidebar-label">
+                                SAMSUNG
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" class="navfilter" id="hsx-Mastel">
+                            <label for="hsx-Mastel" class="sidebar-label">
+                                Mastel
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" class="navfilter" id="hsx-OPPO">
+                            <label for="hsx-OPPO" class="sidebar-label">
+                                OPPO
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="navfilter" id="hsx-Nexta">
+                            <label for="hsx-Nexta">
+                                Nexta
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" class="navfilter" id="hsx-Apple">
+                            <label for="hsx-Apple" class="sidebar-label">
+                                Apple
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" class="navfilter" id="hsx-Xiaomi">
+                            <label for="hsx-Xiaomi" class="sidebar-label">
+                                Xiaomi
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" class="navfilter" id="hsx-lenovo">
+                            <label for="hsx-lenovo">
+                                Lenovo
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="navfilter" id="hsx-coolpad">
+                            <label for="hsx-coolpad">
+                                Coolpad
+                            </label>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        Nhu cầu
+                    </div>
+                    <div class="sidebar-list">
+                        <a href="#">
+                            <input type="checkbox" name="" id="nc-all" checked>
+                            <label for="nc-all">Tất cả</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="nc-gaming">
+                            <label for="nc-gaming">PC Gaming</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="nc-vanphong">
+                            <label for="nc-vanphong">PC Văn phòng</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="nc-dohoa">
+                            <label for="nc-dohoa">PC Đồ họa</label>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        Mức giá
+                    </div>
+                    <div class="sidebar-list">
+                        <a href="#">
+                            <input type="checkbox" name="" id="mg-all" checked>
+                            <label for="mg-alll">
+                                Tất cả
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="mg-d10">
+                            <label for="mg-u10">
+                                Dưới 10 triệu
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="mg-1015">
+                            <label for="mg-1015">
+                                Từ 10 - 15 triệu
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="mg-1520">
+                            <label for="mg-1520">
+                                Từ 15 - 20 triệu
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="mg-2030">
+                            <label for="mg-2030">
+                                Từ 20 - 25 triệu
+                            </label>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        CPU
+                    </div>
+                    <div class="sidebar-list">
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-all" checked>
+                            <label for="cpu-all">
+                                Tất cả
+                            </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-celeron">
+                            <label for="cpu-celeron"> Intel Celeron </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-pentium">
+                            <label for="cpu-pentium"> Intel Pentium </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-core-i3">
+                            <label for="cpu-core-i3"> Intel Core i3 </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-core-i5">
+                            <label for="cpu-core-i5"> Intel Core i5 </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-core-i7">
+                            <label for="cpu-core-i7"> Intel Core i7 </label>
+                        </a>
+                        <a href="#"> <input type="checkbox" name="" id="cpu-core-ultra">
+                            <label for="cpu-core-ultra">Intel Core Ultra </label>
+                        </a>
+                        <a href="#"> <input type="checkbox" name="" id="cpu-ryzen-3">
+                            <label for="cpu-ryzen-3"> AMD Ryzen 3 </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-ryzen-5">
+                            <label for="cpu-ryzen-5"> AMD Ryzen 5 </label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="cpu-ryzen-7">
+                            <label for="cpu-ryzen-7"> AMD Ryzen 7 </label>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        RAM
+                    </div>
+                    <div class="sidebar-list">
+                        <a href="#">
+                            <input type="checkbox" name="" id="ram-all" checked>
+                            <label for="ram-all">Tất cả</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="ram-4">
+                            <label for="ram-4">4GB</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="ram-8">
+                            <label for="ram-8">8GB</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="ram-16">
+                            <label for="ram-16">16GB</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="ram-32">
+                            <label for="ram-32">32GB</label>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        Ổ cứng
+                    </div>
+                    <div class="sidebar-list">
+                        <a href="#">
+                            <input type="checkbox" name="" id="st-all" checked>
+                            <label for="st-all">Tất cả</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="st-128">
+                            <label for="st-128">SSD 128 GB</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="st-240">
+                            <label for="st-240">SSD 240 GB</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="st-256">
+                            <label for="st-256">SSD 256 GB</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="st-512">
+                            <label for="st-512">SSD 512 GB</label>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        Card đồ họa
+                    </div>
+                    <div class="sidebar-list">
+                        <a href="#">
+                            <input type="checkbox" id="card-all" checked>
+                            <label for="card-all">Tất cả</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="card-nvidia">
+                            <label for="card-nvidia">Nvidia geforce</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" name="" id="card-amd">
+                            <label for="card-amd">AMD Radeon</label>
+                        </a>
+                        <a href="#">
+                            <input type="checkbox" id="card-onboard">
+                            <label for="card-onboard">Card onboard</label>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-list">
+                <div class="list-title">
+                    Máy tính bảng
+                </div>
+                <div class="soft-fisrt-box">
+                    <div class="soft-box">
+                        <div class="soft-box-title">
+                            Ưu tiên xem:
+                        </div>
+                        <ul>
+                            <li><a href="#">
+                                    Bán chạy nhất
+                                </a></li>
+                            <li><a href="#">
+                                    Trả góp 0%
+                                </a></li>
+                            <li><a href="#">
+                                    Giá thấp
+                                </a></li>
+                            <li><a href="#">
+                                    Giá cao
+                                </a></li>
+                            <li><a href="#">
+                                    Ưu đãi online
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-style">
+
+                    </div>
+                </div>
+                <div class="prd-list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="category-container">
+            <ul>
+                <li>
+                    <a href="#">Giới thiệu về công ty</a>
+                </li>
+                <li>
+                    <a href="#">Chính sách bảo mật</a>
+                </li>
+                <li>
+                    <a href="#">Quy chế hoạt động</a>
+                </li>
+                <li>
+                    <a href="#">Kiểm tra hóa đơn điện tử</a>
+                </li>
+                <li>
+                    <a href="#">Tra cứu thông tin bảo hành</a>
+                </li>
+                <li>
+                    <a href="#">Câu hỏi thường gặp mua hàng</a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li><a href="#">
+                        Tin tuyển dụng
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Tin khuyến mãi
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hướng dẫn mua online
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hướng dẫn mua trả góp
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách trả góp
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách thu thập và xửa lý dữ liệu cá nhân
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        Hệ thống cửa hàng
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách đổi trả
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Hệ thống bảo hành
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Giới thiệu máy đổi trả
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Chính sách mạng di động
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container" id="ft-4">
+            <ul>
+                <li>
+                    <p>Tư vấn mua hàng</p>
+                    <a href="#">1800 6601
+                        <span>(Nhánh 1)</span>
+                    </a>
+                </li>
+                <li>
+                    <p>Hỗ trợ kỹ thuật</p>
+                    <a href="#">1800 6601
+                        <span>(Nhánh 2)</span>
+                    </a>
+                </li>
+                <li>
+                    <p>Góp ý, khiếu nại(8h00 - 22h00)</p>
+                    <a href="#">1800 6616</a>
+                </li>
+                <li>
+                    <p>Hỗ trợ thanh toán:</p>
+                    <div id="ft-payment">
+                        <img src="../img/footer/ft-img6.png" alt="visa">
+                        <img src="../img/footer/ft-img7.png" alt="monstercard">
+                        <img src="../img/footer/ft-img8.png" alt="JCB">
+                        <img src="../img/footer/ft-img9.png" alt="atm">
+                        <img src="../img/footer/ft-img12.png" alt="zalopay">
+                        <img src="../img/footer/ft-img13.png" alt="smartpay">
+                        <img src="../img/footer/ft-img14.png" alt="foxpay">
+                        <img src="../img/footer/ft-img15.png" alt="kredivo">
+                        <img src="../img/footer/ft-imgamex.png" alt="american expresss">
+                        <img src="../img/footer/muadee.png" alt="hdbank">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="category-container">
+            <ul>
+                <li>
+                    <div>
+                        <p>Kết nối với chúng tôi</p>
+                        <img src="/img/footer/ic-facebook.png" alt="facebook">
+                        <img src="/img/footer/ic-zalo.png" alt="zalo">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
